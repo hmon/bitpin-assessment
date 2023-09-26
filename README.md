@@ -10,7 +10,7 @@ pnpm install
 ### Compiles and hot-reloads for development
 
 ```
-pnpm serve
+pnpm start
 ```
 
 ## Techs:
