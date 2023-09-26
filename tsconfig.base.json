@@ -1,0 +1,51 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@bitpin/common-layout": [
+        "libs/common-layout/src/index.ts"
+      ],
+      "@bitpin/design-system": [
+        "libs/design-system/src/index.ts"
+      ],
+      "@bitpin/shared-components": [
+        "libs/shared-components/src/index.ts"
+      ],
+      "@bitpin/shared-models": [
+        "libs/shared-models/src/index.ts"
+      ],
+      "@bitpin/shared-utilities": [
+        "libs/shared-utilities/src/index.ts"
+      ],
+      "@bitpin/shared-hooks": [
+        "libs/shared-hooks/src/index.ts"
+      ],
+      "@bitpin/ui": [
+        "libs/ui/src/index.ts"
+      ],
+      "@bitpin/dev": [
+        "dev/index.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

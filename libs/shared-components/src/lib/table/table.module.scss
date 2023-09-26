@@ -1,0 +1,128 @@
+@import 'libs/design-system/src/lib/variables.scss';
+@import 'libs/design-system/src/lib/mixins.scss';
+
+.container {
+  margin: 4rem 0;
+
+  @include mobile() {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  @include tablet() {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  table {
+    width: 100%;
+
+    @include mobile() {
+      td {
+        min-width: 200px;
+
+        &:first-of-type {
+          min-width: 70px;
+        }
+      }
+    }
+
+    @include tablet() {
+      td {
+        min-width: 200px;
+
+        &:first-of-type {
+          min-width: 70px;
+        }
+      }
+    }
+
+    thead {
+      tr:first-of-type {
+        td:first-of-type {
+          border-top-right-radius: 1rem;
+        }
+
+        td:last-of-type {
+          border-top-left-radius: 1rem;
+        }
+      }
+
+      td {
+        font-weight: bold;
+        color: $color_primary;
+      }
+    }
+
+    tbody {
+      tr:last-of-type {
+        td:first-of-type {
+          border-bottom-right-radius: 10px;
+        }
+
+        td:last-of-type {
+          border-bottom-left-radius: 10px;
+        }
+      }
+    }
+
+    td {
+      padding: 1.5rem 0;
+      text-align: center;
+      transition: all ease 400ms;
+    }
+
+    tr:nth-child(odd) td {
+      background-color: lighten($color_background, 7%);
+    }
+
+    tr:nth-child(even) td {
+      background-color: lighten($color_background, 3%);
+    }
+
+    tr:hover td {
+      background-color: $color_secondary !important;
+    }
+  }
+}
+
+.table-header-item {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      cursor: pointer;
+    }
+  }
+}
+
+.state {
+  padding: 0.4rem 1.2rem;
+  font-size: 1.3rem;
+  border-radius: 10rem;
+  display: inline-block;
+
+  &.true {
+    background-color: $color_success;
+  }
+
+  &.false {
+    background-color: $color_danger;
+  }
+}
+
+.empty-state {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
